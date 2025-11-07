@@ -1,0 +1,30 @@
+/* styles.css
+   Keeps visual parity with reference theme (shadows, spacing, transitions).
+   Tweak these to match colors/spacing more finely.
+*/
+
+html,body{height:100%}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; margin:0; background:white; color:#111}
+
+.cta-btn{will-change:transform}
+.tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#f3f4f6;color:#374151;font-size:13px;font-weight:600}
+.skill-card{background:white;padding:2rem;border-radius:0;border:1px solid #e5e7eb;box-shadow:0 6px 18px rgba(8,8,8,0.04);text-align:center;font-weight:700}
+
+/* project card hover effect */
+article:hover{transform:translateY(-10px);transition:all .35s cubic-bezier(.2,.8,.2,1);box-shadow:0 20px 40px rgba(2,6,23,0.12)}
+
+/* hero large heading */
+h1{line-height:0.9}
+
+/* small responsive tweaks */
+@media (max-width:768px){
+  h1{font-size:3rem}
+  .text-6xl{font-size:3rem}
+}
+
+/* subtle fade/slide animation helpers (used by JS to add classes) */
+.fade-in { opacity: 0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* canvas placeholder (if you add background rendering) */
+#bg-canvas{opacity:0.06}
